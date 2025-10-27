@@ -220,3 +220,151 @@ section {
     text-align: left;
   }
 }
+/* ---------- GLOBAL AUTH PAGE STYLES ---------- */
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f0ff, #fefefe, #f3f6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating gradient blobs */
+.auth-container::before, .auth-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.4;
+  animation: floaty 10s infinite ease-in-out alternate;
+}
+.auth-container::before {
+  width: 350px;
+  height: 350px;
+  top: -100px;
+  left: -100px;
+  background: #cbb8ff;
+}
+.auth-container::after {
+  width: 400px;
+  height: 400px;
+  bottom: -120px;
+  right: -120px;
+  background: #a7e4ff;
+}
+
+@keyframes floaty {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+.auth-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 8px 40px rgba(100, 100, 111, 0.2);
+  border-radius: 24px;
+  padding: 45px 40px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-box h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #2f2a5d;
+  margin-bottom: 25px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #d5d1ff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+}
+.auth-box input:focus {
+  border-color: #7b61ff;
+  box-shadow: 0 0 5px #bdb1ff;
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  background: linear-gradient(90deg, #6f3cff, #a27bff);
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.auth-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(111, 60, 255, 0.4);
+}
+
+.auth-box p {
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.9rem;
+}
+.auth-box a {
+  color: #6f3cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Subtle fade success or error message */
+.message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+.message.success {
+  background: #4CAF50;
+}
+.message.error {
+  background: #e74c3c;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Small floating logo */
+.brand-logo {
+  font-size: 1rem;
+  color: #7b61ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  opacity: 0.8;
+}
