@@ -3,155 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Root Serum | Natural Radiance</title>
-
-  <!-- Firebase SDKs (Compat Version) -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script src="firebase-config.js"></script>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Root Serum | ZeroIN</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet"
+  />
+  <script type="module" src="firebase-config.js" defer></script>
+  <script type="module" src="auth.js" defer></script>
 </head>
+
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold brand-text" href="#home">ZeroIN</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <a class="nav-link" href="login.html">Login</a></li>
-          <li class="nav-item">
-          <a class="btn btn-dark ms-2 px-3 py-1 rounded-0" href="signup.html">Sign Up</a></li>
-
-        </ul>
-      </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">ZeroIN</div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="auth-buttons">
+      <button id="loginBtn" class="btn-outline">Login</button>
+      <button id="signupBtn" class="btn">Sign Up</button>
+      <button id="logoutBtn" class="btn" style="display:none;">Logout</button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-start hero-text">
-          <h1 class="display-4 fw-bold mb-3">Illuminate Your Natural Glow</h1>
-          <p class="lead mb-4">
-            Discover the elegance of nature in every drop. Lumina Serum restores your skin’s
-            radiance and confidence — one glow at a time.
-          </p>
-          <a href="#benefits" class="btn btn-dark mt-2 px-4 py-2 rounded-0">Explore More</a>
-        </div>
-
-        <div class="col-md-6 text-center hero-image">
-          <div class="image-wrapper">
-            <img src="product1.png" alt="Root Serum Bottle" class="product-image">
-          </div>
-        </div>
-      </div>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Root Serum</h1>
+      <p>
+        Experience the essence of nature refined through science. Root Serum by
+        ZeroIN revives your skin’s natural balance and restores radiant
+        confidence.
+      </p>
+      <button class="btn primary">Shop Now</button>
+    </div>
+    <div class="hero-img">
+      <img src="assets/root-serum-bottle.png" alt="Root Serum Bottle" />
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-5 text-center container">
-    <h2 class="section-title mb-4">Our Story</h2>
-    <p class="text-muted col-md-8 mx-auto">
-      ZeroIN was born from a passion to bring pure, effective skincare without compromise.
-      Our serum combines ancient botanical wisdom with modern science, nourishing your skin naturally.
-      Every bottle embodies care, simplicity, and self-love.
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>About ZeroIN</h2>
+    <p>
+      ZeroIN was born from the philosophy of mindful skincare. Every formula we
+      create focuses on zero compromise — using pure, plant-powered ingredients
+      backed by modern dermatological research.
     </p>
+    <div class="about-images">
+      <img src="assets/lab-process.png" alt="Lab Process" />
+      <img src="assets/botanical-extract.png" alt="Botanical Extracts" />
+    </div>
   </section>
 
-  <!-- Benefits Section -->
-  <section id="benefits" class="py-5 text-center bg-gradient">
-    <div class="container">
-      <h2 class="section-title mb-5">Key Benefits</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="benefit-card p-4">
-            <h5>Hydration Boost</h5>
-            <p>Keeps your skin fresh and plump all day with natural moisture retention.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="benefit-card p-4">
-            <h5>Even Tone</h5>
-            <p>Brightens dull areas, leaving your skin smooth and balanced.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="benefit-card p-4">
-            <h5>Gentle Repair</h5>
-            <p>Reduces irritation and helps skin recover from environmental stress.</p>
-          </div>
-        </div>
+  <!-- BENEFITS SECTION -->
+  <section id="benefits" class="benefits">
+    <h2>Why Choose Root Serum?</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <h4>Hydration Amplified</h4>
+        <p>
+          Deeply nourishes and retains moisture, keeping your skin supple and
+          refreshed all day.
+        </p>
+      </div>
+      <div class="benefit">
+        <h4>Brightens Naturally</h4>
+        <p>
+          Evens tone and restores luminosity with natural vitamin C extracts.
+        </p>
+      </div>
+      <div class="benefit">
+        <h4>Soothes & Repairs</h4>
+        <p>
+          Reduces irritation and supports the skin barrier with herbal actives.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Reviews Section -->
-  <section id="reviews" class="py-5 text-center">
-    <div class="container">
-      <h2 class="section-title mb-5">What People Say</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="review-card p-4">
-            <p>"My skin feels smoother and hydrated after using Lumina for just two weeks!"</p>
-            <strong>- Aisha R.</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="review-card p-4">
-            <p>"It’s lightweight, smells natural, and gives my skin a subtle glow."</p>
-            <strong>- Meera K.</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="review-card p-4">
-            <p>"Best serum I’ve tried. It feels luxurious and absorbs instantly."</p>
-            <strong>- Priya S.</strong>
-          </div>
-        </div>
+  <!-- REVIEWS SECTION -->
+  <section id="reviews" class="reviews">
+    <h2>What People Say</h2>
+    <div class="review-grid">
+      <div class="review">
+        <p>
+          “After two weeks, my skin looks smoother and feels genuinely
+          hydrated.”
+        </p>
+        <strong>- Aisha R.</strong>
+      </div>
+      <div class="review">
+        <p>“A serum that actually delivers glow without feeling sticky.”</p>
+        <strong>- Meera K.</strong>
+      </div>
+      <div class="review">
+        <p>“Pure luxury. Subtle scent, amazing absorption, no breakouts.”</p>
+        <strong>- Priya S.</strong>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5 text-center bg-light">
-    <div class="container">
-      <h2 class="section-title mb-4">Get In Touch</h2>
-      <p class="text-muted mb-4">We’d love to hear from you! Drop your message below.</p>
-      <form class="col-md-6 mx-auto">
-        <div class="mb-3">
-          <input type="text" class="form-control rounded-0" placeholder="Full Name" required>
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control rounded-0" placeholder="Email" required>
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control rounded-0" rows="4" placeholder="Message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-dark rounded-0 px-4">Send Message</button>
-      </form>
-    </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p>Have a question or want to collaborate? Drop us a message.</p>
+    <form id="contactForm" class="contact-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Your Message" rows="4"></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-3 text-center bg-dark text-white">
-    <small>© 2025 Root. All rights reserved.</small>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 ZeroIN. All Rights Reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      window.location.href = 'login.html';
+    });
+    document.getElementById('signupBtn').addEventListener('click', () => {
+      window.location.href = 'signup.html';
+    });
+  </script>
 </body>
 </html>
