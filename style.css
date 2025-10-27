@@ -291,3 +291,31 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
   }
 }
+/* ---------- TOAST POPUP ---------- */
+.toast {
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3b2f2f;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  opacity: 0;
+  font-size: 0.95rem;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.toast.success {
+  background: #28a745;
+}
+
+.toast.error {
+  background: #dc3545;
+}

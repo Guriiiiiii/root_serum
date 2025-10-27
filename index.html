@@ -3,138 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Root Serum | ZeroIN</title>
+  <title>ZeroIN | Root Face Serum</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap"
-    rel="stylesheet"
-  />
-  <script type="module" src="firebase-config.js" defer></script>
-  <script type="module" src="auth.js" defer></script>
 </head>
-
 <body>
   <!-- NAVBAR -->
-  <header class="navbar">
+  <nav class="navbar">
     <div class="logo">ZeroIN</div>
-    <nav class="nav-links">
+    <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#benefits">Benefits</a>
-      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
-    </nav>
-    <div class="auth-buttons">
-      <button id="loginBtn" class="btn-outline">Login</button>
-      <button id="signupBtn" class="btn">Sign Up</button>
-      <button id="logoutBtn" class="btn" style="display:none;">Logout</button>
     </div>
-  </header>
+    <div class="auth-buttons">
+      <button id="login-btn" class="btn-outline" onclick="window.location.href='login.html'">Login</button>
+      <button id="signup-btn" class="btn" onclick="window.location.href='signup.html'">Sign Up</button>
+      <button id="logout-btn" class="btn" style="display:none;">Logout</button>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
-  <section id="home" class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Root Serum</h1>
-      <p>
-        Experience the essence of nature refined through science. Root Serum by
-        ZeroIN revives your skin’s natural balance and restores radiant
-        confidence.
-      </p>
-      <button class="btn primary">Shop Now</button>
+      <h1>Root Serum by ZeroIN</h1>
+      <p>Nurture your skin from its roots with nature’s cleanest formula.  
+      Pure, plant-based, and powerful — ZeroIN on beauty that begins within.</p>
+      <button class="btn">Shop Now</button>
     </div>
     <div class="hero-img">
-      <img src="assets/root-serum-bottle.png" alt="Root Serum Bottle" />
+      <img src="product1.png" alt="Root Serum Bottle" />
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2>About ZeroIN</h2>
-    <p>
-      ZeroIN was born from the philosophy of mindful skincare. Every formula we
-      create focuses on zero compromise — using pure, plant-powered ingredients
-      backed by modern dermatological research.
-    </p>
-    <div class="about-images">
-      <img src="assets/lab-process.png" alt="Lab Process" />
-      <img src="assets/botanical-extract.png" alt="Botanical Extracts" />
-    </div>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Root Serum</h2>
+    <p>Crafted from organic extracts, Root Serum helps restore your skin’s natural glow and balance. No chemicals. No nonsense. Just results that feel real.</p>
   </section>
 
-  <!-- BENEFITS SECTION -->
-  <section id="benefits" class="benefits">
-    <h2>Why Choose Root Serum?</h2>
+  <!-- BENEFITS -->
+  <section class="benefits" id="benefits">
+    <h2>Why Choose Root?</h2>
     <div class="benefits-grid">
-      <div class="benefit">
-        <h4>Hydration Amplified</h4>
-        <p>
-          Deeply nourishes and retains moisture, keeping your skin supple and
-          refreshed all day.
-        </p>
-      </div>
-      <div class="benefit">
-        <h4>Brightens Naturally</h4>
-        <p>
-          Evens tone and restores luminosity with natural vitamin C extracts.
-        </p>
-      </div>
-      <div class="benefit">
-        <h4>Soothes & Repairs</h4>
-        <p>
-          Reduces irritation and supports the skin barrier with herbal actives.
-        </p>
-      </div>
+      <div class="benefit"><h3>Hydrating</h3><p>Keeps your skin soft and glowing all day long.</p></div>
+      <div class="benefit"><h3>Natural</h3><p>Formulated with clean, cruelty-free ingredients.</p></div>
+      <div class="benefit"><h3>Repairing</h3><p>Reduces fine lines and revives tired skin.</p></div>
     </div>
   </section>
 
-  <!-- REVIEWS SECTION -->
-  <section id="reviews" class="reviews">
-    <h2>What People Say</h2>
-    <div class="review-grid">
-      <div class="review">
-        <p>
-          “After two weeks, my skin looks smoother and feels genuinely
-          hydrated.”
-        </p>
-        <strong>- Aisha R.</strong>
-      </div>
-      <div class="review">
-        <p>“A serum that actually delivers glow without feeling sticky.”</p>
-        <strong>- Meera K.</strong>
-      </div>
-      <div class="review">
-        <p>“Pure luxury. Subtle scent, amazing absorption, no breakouts.”</p>
-        <strong>- Priya S.</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>Have a question or want to collaborate? Drop us a message.</p>
-    <form id="contactForm" class="contact-form">
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <textarea placeholder="Your Message" rows="4"></textarea>
-      <button class="btn primary" type="submit">Send Message</button>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Got questions or love notes? We’d love to hear from you.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 ZeroIN. All Rights Reserved.</p>
+    © 2025 ZeroIN — Root Serum | All rights reserved
   </footer>
 
-  <script>
-    document.getElementById('loginBtn').addEventListener('click', () => {
-      window.location.href = 'login.html';
-    });
-    document.getElementById('signupBtn').addEventListener('click', () => {
-      window.location.href = 'signup.html';
-    });
-  </script>
+  <script type="module" src="auth.js"></script>
 </body>
 </html>
