@@ -7,55 +7,70 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">ZeroIN</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#benefits">Benefits</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="auth-buttons">
-      <button id="login-btn" class="btn-outline" onclick="window.location.href='login.html'">Login</button>
-      <button id="signup-btn" class="btn" onclick="window.location.href='signup.html'">Sign Up</button>
-      <button id="logout-btn" class="btn" style="display:none;">Logout</button>
-    </div>
-  </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Root Serum by ZeroIN</h1>
-      <p>Nurture your skin from its roots with nature’s cleanest formula.  
-      Pure, plant-based, and powerful — ZeroIN on beauty that begins within.</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Zero<span>IN</span></h1>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="auth-buttons">
+        <button id="login-btn" class="btn-outline" onclick="window.location.href='login.html'">Login</button>
+        <button id="signup-btn" class="btn" onclick="window.location.href='signup.html'">Sign Up</button>
+        <button id="logout-btn" class="btn logout" style="display:none;">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Root Serum</h2>
+      <p>Revive. Replenish. Radiate.  
+      Discover nature’s cleanest skincare formula by ZeroIN.</p>
       <button class="btn">Shop Now</button>
     </div>
     <div class="hero-img">
-      <img src="product1.png" alt="Root Serum Bottle" />
+      <img src="product1.png" alt="Root Serum bottle" />
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <!-- About -->
+  <section id="about" class="about">
     <h2>About Root Serum</h2>
-    <p>Crafted from organic extracts, Root Serum helps restore your skin’s natural glow and balance. No chemicals. No nonsense. Just results that feel real.</p>
+    <p>
+      Our serum is crafted from pure botanical extracts designed to nourish your skin from within. 
+      It’s cruelty-free, vegan, and dermatologist-approved. Because your skin deserves real care, not chemicals.
+    </p>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="benefits" id="benefits">
+  <!-- Benefits -->
+  <section id="benefits" class="benefits">
     <h2>Why Choose Root?</h2>
     <div class="benefits-grid">
-      <div class="benefit"><h3>Hydrating</h3><p>Keeps your skin soft and glowing all day long.</p></div>
-      <div class="benefit"><h3>Natural</h3><p>Formulated with clean, cruelty-free ingredients.</p></div>
-      <div class="benefit"><h3>Repairing</h3><p>Reduces fine lines and revives tired skin.</p></div>
+      <div class="card">
+        <h3>🌿 Hydrating</h3>
+        <p>Infuses your skin with moisture for a glowing complexion.</p>
+      </div>
+      <div class="card">
+        <h3>💧 Clean</h3>
+        <p>Free from parabens, sulfates, and synthetic fragrances.</p>
+      </div>
+      <div class="card">
+        <h3>✨ Restorative</h3>
+        <p>Improves elasticity and reduces fine lines naturally.</p>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <!-- Contact -->
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Got questions or love notes? We’d love to hear from you.</p>
+    <p>Have questions or feedback? We’d love to hear from you.</p>
     <form class="contact-form">
       <input type="text" placeholder="Name" required />
       <input type="email" placeholder="Email" required />
@@ -64,9 +79,8 @@
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    © 2025 ZeroIN — Root Serum | All rights reserved
+    <p>© 2025 ZeroIN — Root Serum | All Rights Reserved</p>
   </footer>
 
   <script type="module" src="auth.js"></script>
